@@ -11,6 +11,12 @@ require 'what_methods'
 # Pretty Print method
 require 'pp'
 
+require 'hirb'
+extend Hirb::Console
+
+require 'boson'
+Boson.start
+
 # Load the readline module.
 IRB.conf[:USE_READLINE] = true
 
@@ -93,4 +99,7 @@ end
 
 # http://sketches.rubyforge.org/
 require 'sketches'
-Sketches.config :editor => 'gvim'
+Sketches.config :editor => 'mate'
+
+puts "Using Custom irbrc"
+
